@@ -1,7 +1,7 @@
 //
 //  SingleTorrentRow.swift
 //  WatchTorrent Watch App
-//
+// 
 //  Created by Aayush Pokharel on 2022-12-19.
 //
 
