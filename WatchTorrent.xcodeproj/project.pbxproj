@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C22A85062950F804001EB3B3 /* WatchTorrent Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C22A85052950F804001EB3B3 /* WatchTorrent Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C22A85062950F804001EB3B3 /* WatchTorrentApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C22A85052950F804001EB3B3 /* WatchTorrentApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C22A850B2950F804001EB3B3 /* WatchTorrentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A850A2950F804001EB3B3 /* WatchTorrentApp.swift */; };
 		C22A850D2950F804001EB3B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A850C2950F804001EB3B3 /* ContentView.swift */; };
 		C22A850F2950F805001EB3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22A850E2950F805001EB3B3 /* Assets.xcassets */; };
@@ -38,7 +38,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				C22A85062950F804001EB3B3 /* WatchTorrent Watch App.app in Embed Watch Content */,
+				C22A85062950F804001EB3B3 /* WatchTorrentApp.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		C22A84FF2950F804001EB3B3 /* WatchTorrent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchTorrent.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C22A85052950F804001EB3B3 /* WatchTorrent Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchTorrent Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C22A85052950F804001EB3B3 /* WatchTorrentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchTorrentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22A850A2950F804001EB3B3 /* WatchTorrentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTorrentApp.swift; sourceTree = "<group>"; };
 		C22A850C2950F804001EB3B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C22A850E2950F805001EB3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		C22A84F82950F804001EB3B3 = {
 			isa = PBXGroup;
 			children = (
-				C22A85092950F804001EB3B3 /* WatchTorrent Watch App */,
+				C22A85092950F804001EB3B3 /* WatchTorrentApp */,
 				C22A85002950F804001EB3B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,12 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				C22A84FF2950F804001EB3B3 /* WatchTorrent.app */,
-				C22A85052950F804001EB3B3 /* WatchTorrent Watch App.app */,
+				C22A85052950F804001EB3B3 /* WatchTorrentApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C22A85092950F804001EB3B3 /* WatchTorrent Watch App */ = {
+		C22A85092950F804001EB3B3 /* WatchTorrentApp */ = {
 			isa = PBXGroup;
 			children = (
 				C22A850A2950F804001EB3B3 /* WatchTorrentApp.swift */,
@@ -102,7 +102,7 @@
 				C22A850E2950F805001EB3B3 /* Assets.xcassets */,
 				C22A85102950F805001EB3B3 /* Preview Content */,
 			);
-			path = "WatchTorrent Watch App";
+			path = WatchTorrentApp;
 			sourceTree = "<group>";
 		};
 		C22A85102950F805001EB3B3 /* Preview Content */ = {
@@ -167,9 +167,9 @@
 			productReference = C22A84FF2950F804001EB3B3 /* WatchTorrent.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
-		C22A85042950F804001EB3B3 /* WatchTorrent Watch App */ = {
+		C22A85042950F804001EB3B3 /* WatchTorrentApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C22A85152950F805001EB3B3 /* Build configuration list for PBXNativeTarget "WatchTorrent Watch App" */;
+			buildConfigurationList = C22A85152950F805001EB3B3 /* Build configuration list for PBXNativeTarget "WatchTorrentApp" */;
 			buildPhases = (
 				C22A85012950F804001EB3B3 /* Sources */,
 				C22A85022950F804001EB3B3 /* Frameworks */,
@@ -179,9 +179,9 @@
 			);
 			dependencies = (
 			);
-			name = "WatchTorrent Watch App";
+			name = WatchTorrentApp;
 			productName = "WatchTorrent Watch App";
-			productReference = C22A85052950F804001EB3B3 /* WatchTorrent Watch App.app */;
+			productReference = C22A85052950F804001EB3B3 /* WatchTorrentApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 			projectRoot = "";
 			targets = (
 				C22A84FE2950F804001EB3B3 /* WatchTorrent */,
-				C22A85042950F804001EB3B3 /* WatchTorrent Watch App */,
+				C22A85042950F804001EB3B3 /* WatchTorrentApp */,
 			);
 		};
 /* End PBXProject section */
@@ -262,7 +262,7 @@
 /* Begin PBXTargetDependency section */
 		C22A85082950F804001EB3B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C22A85042950F804001EB3B3 /* WatchTorrent Watch App */;
+			target = C22A85042950F804001EB3B3 /* WatchTorrentApp */;
 			targetProxy = C22A85072950F804001EB3B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -384,7 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchTorrent Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WatchTorrentApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 4538W4A79B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -414,7 +414,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchTorrent Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WatchTorrentApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 4538W4A79B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -483,7 +483,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C22A85152950F805001EB3B3 /* Build configuration list for PBXNativeTarget "WatchTorrent Watch App" */ = {
+		C22A85152950F805001EB3B3 /* Build configuration list for PBXNativeTarget "WatchTorrentApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C22A85162950F805001EB3B3 /* Debug */,

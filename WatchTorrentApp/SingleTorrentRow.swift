@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SingleTorrentRow: View {
-    @State private var showDetails: Bool = true
+    @State private var showDetails: Bool = false
     let torrent: TorrentModel
     var body: some View {
         VStack(alignment: .leading) {
