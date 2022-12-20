@@ -59,6 +59,7 @@
 		C22A85272950FE55001EB3B3 /* SingleTorrentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTorrentRow.swift; sourceTree = "<group>"; };
 		C22A852A2951056A001EB3B3 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		C22A852C29512C58001EB3B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C288E55B29515D6C006E39E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		C22A85092950F804001EB3B3 /* WatchTorrentApp */ = {
 			isa = PBXGroup;
 			children = (
+				C288E55B29515D6C006E39E7 /* Info.plist */,
 				C22A850A2950F804001EB3B3 /* WatchTorrentApp.swift */,
 				C22A850C2950F804001EB3B3 /* ContentView.swift */,
 				C22A85272950FE55001EB3B3 /* SingleTorrentRow.swift */,
@@ -388,6 +390,7 @@
 				DEVELOPMENT_TEAM = 4538W4A79B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WatchTorrentApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchTorrent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -418,6 +421,7 @@
 				DEVELOPMENT_TEAM = 4538W4A79B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WatchTorrentApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchTorrent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
