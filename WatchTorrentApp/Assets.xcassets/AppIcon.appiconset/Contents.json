@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "watchtorrent.png",
+      "filename" : "appicon.png",
       "idiom" : "universal",
       "platform" : "watchos",
       "size" : "1024x1024"
