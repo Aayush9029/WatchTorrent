@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/43297314/208554895-98d40d9e-232a-45c4-8d4a-66835036a546.png" width="200px">
+  <img src="https://user-images.githubusercontent.com/43297314/208557206-5f7219c1-2907-4c92-b8cb-215f3f18e536.png" width="200px">
   <h2> WatchTorrent </h2>
   
   Manage qbittorrent instance from your wrist.
