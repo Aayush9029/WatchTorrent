@@ -20,7 +20,7 @@
 ![CleanShot 2022-12-19 at 20 10 05](https://user-images.githubusercontent.com/43297314/208558094-86c48e8b-7fa1-43af-9e31-56e8f5b98995.png)
 
 
-### Dummy JSON data
+### [Dummy JSON data](https://github.com/Aayush9029/WatchTorrent/blob/main/WatchTorrentApp/Data/Examples/torrent.json)
 
 ```json
 {...
