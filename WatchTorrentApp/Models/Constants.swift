@@ -15,7 +15,7 @@ enum Constants {
     // static let piedPiper = true
     // static let serverIP = "0.0.0.0"
     // static let serverPORT = 4444
-    // static let torrentKey = "com-aayush-opensource-watchtorrent-torrents-url-key-for-piedpiper"
+    // static let torrentKey = "com-aayush-can-be-anything"
 
     // static let remoteServer = "http://\(serverIP):\(serverPORT)/api/v1/nodes/"
     // static let torrentsURL = URL(string: "\(remoteServer)/\(torrentKey)")!
