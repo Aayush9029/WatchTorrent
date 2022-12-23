@@ -18,6 +18,7 @@
 		C22A85252950FD4F001EB3B3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A85242950FD4F001EB3B3 /* Helpers.swift */; };
 		C22A85282950FE55001EB3B3 /* SingleTorrentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A85272950FE55001EB3B3 /* SingleTorrentRow.swift */; };
 		C22A852B2951056A001EB3B3 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A852A2951056A001EB3B3 /* Int+Extensions.swift */; };
+		C22D70AF29553D9B000DE71E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D70AE29553D9B000DE71E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C22A85272950FE55001EB3B3 /* SingleTorrentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTorrentRow.swift; sourceTree = "<group>"; };
 		C22A852A2951056A001EB3B3 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		C22A852C29512C58001EB3B3 /* Constants-Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants-Example.swift"; sourceTree = "<group>"; };
+		C22D70AE29553D9B000DE71E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C288E55B29515D6C006E39E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 				C22A851F2950FAA2001EB3B3 /* TorrentModel.swift */,
 				C22A85242950FD4F001EB3B3 /* Helpers.swift */,
 				C22A852C29512C58001EB3B3 /* Constants-Example.swift */,
+				C22D70AE29553D9B000DE71E /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				C22A852B2951056A001EB3B3 /* Int+Extensions.swift in Sources */,
 				C22A85252950FD4F001EB3B3 /* Helpers.swift in Sources */,
 				C22A850B2950F804001EB3B3 /* WatchTorrentApp.swift in Sources */,
+				C22D70AF29553D9B000DE71E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
