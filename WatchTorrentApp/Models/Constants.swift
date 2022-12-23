@@ -13,7 +13,7 @@ struct Constants {
 
     // change this
     static let serverIP = "0.0.0.0"
-    static let serverPORT = 44444
+    static let serverPORT = 4444
 
     // this can be anything, longer and whacky-er the better
     static let torrentKey = "com-aayush-opensource-watchtorrent-torrents-url-key-for-piedpiper"
