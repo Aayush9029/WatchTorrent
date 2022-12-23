@@ -10,6 +10,10 @@
 
 </div>
 
+### Usage
+- 📝 [Copy Constants-Example.swift as Constants.swift](https://github.com/Aayush9029/WatchTorrent/blob/main/WatchTorrentApp/Models/Constants-Example.swift)
+- ✏️ Modify according to your taste.
+- 🛠️ Build & Run
 
 ### Thanks to
 
