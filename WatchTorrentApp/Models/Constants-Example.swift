@@ -10,7 +10,7 @@ import Foundation
 // Rename to Constants and add to WatchTorrentApp Target
 
 enum Constants_Example {
-    // API: Using PiedPiper as middle man to my home server
+    // API: Using PiedPiper as middle man from my home server to public server.
     //  https://github.com/Aayush9029/PiedPiper
 
     // YES a PiedPiper
