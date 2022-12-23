@@ -36,11 +36,21 @@ struct ContentView: View {
                 .foregroundStyle(.secondary)
             }
         }.task {
-            torrents = await TorrentModel.fetch()
+            Task {
+                if Constants.piedPiper {
+                    torrents = await PiedPiperModel.fetch()
+                } else {
+                    torrents = TorrentModel.example()
+                }
+            }
         }
         .onReceive(timer) { _ in
             Task {
-                torrents = await TorrentModel.fetch()
+                if Constants.piedPiper {
+                    torrents = await PiedPiperModel.fetch()
+                } else {
+                    torrents = await TorrentModel.fetch()
+                }
             }
         }
     }

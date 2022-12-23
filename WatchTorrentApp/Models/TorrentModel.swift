@@ -121,6 +121,68 @@ extension TorrentModel {
     }
 
     static func fetch() async -> [TorrentModel]? {
-        try? await APIService.fetchTorrents()
+        do {
+            let (data, _) = try await URLSession.shared.data(from: Constants.torrentsURL)
+            return try JSONDecoder().decode([TorrentModel].self, from: data)
+        } catch let DecodingError.valueNotFound(value, context) {
+            print("Value '\(value)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch let DecodingError.typeMismatch(type, context) {
+            print("Type '\(type)' mismatch:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+}
+
+// MARK: PiedPiper Model
+
+struct PiedPiperModel: Codable {
+    let data: String
+}
+
+extension PiedPiperModel {
+    static func example() async -> [TorrentModel]? {
+        let data = readLocalJSONFile(forName: "piedpiper")!
+        let ppModel = try? JSONDecoder().decode(PiedPiperModel.self, from: data)
+
+        return await piedToTorrent(pied: ppModel)
+    }
+
+    static func fetch() async -> [TorrentModel]? {
+        do {
+            let (data, _) = try await URLSession.shared.data(from: Constants.torrentsURL)
+            let ppModel = try JSONDecoder().decode(PiedPiperModel.self, from: data)
+
+            return await piedToTorrent(pied: ppModel)
+
+        } catch let DecodingError.valueNotFound(value, context) {
+            print("Value '\(value)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch let DecodingError.typeMismatch(type, context) {
+            print("Type '\(type)' mismatch:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+
+    static func piedToTorrent(pied: PiedPiperModel?) async -> [TorrentModel]? {
+        if let data = pied?.data {
+            // curl -X GET http://localserver:port/api/v2/torrents/info | base64
+            // Decoding for client side (personal choice)
+            if let b64D1 = data.base64Decoded() {
+                // Decoding for server side (server choice)
+                if let b64D2 = b64D1.base64Decoded() {
+                    if let b64Data = b64D2.data(using: .utf8) {
+                        return try? JSONDecoder().decode([TorrentModel].self, from: b64Data)
+                    }
+                }
+            }
+        }
+        return nil
     }
 }
