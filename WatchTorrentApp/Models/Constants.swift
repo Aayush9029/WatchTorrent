@@ -8,28 +8,16 @@
 import Foundation
 
 struct Constants {
-    // BASE URL
-    static let ipPort = "192.168.68.141:8080"
-    static let server = "http://\(ipPort)/api/v2"
+    // API: Using PiedPiper as middle man to my home server
+    //  https://github.com/Aayush9029/PiedPiper
 
-    // API
-    static let torrentsURL = URL(string: "\(server)/torrents/info")!
+    // change this
+    static let serverIP = "0.0.0.0"
+    static let serverPORT = 4444
 
-    // actions
-    static let action = "\(server)/torrents"
-    static let pause = "\(action)/pause?hashes="
-    static let resume = "\(action)/resume?hashes="
-    static let delete = "\(action))/delete?hashes="
+    // this can be anything, longer and whacky-er the better
+    static let torrentKey = "com-aayush-opensource-watchtorrent-torrents-url-key-for-piedpiper"
 
-    static func addHashes(hashes: [String], base: String) -> URL {
-        var baseString = base
-        baseString += hashes.joined(separator: "|")
-        return URL(string: baseString)!
-    }
-
-    static func deleteURL(hashes: [String], storedData: Bool) -> URL {
-        return addHashes(hashes: hashes, base: delete).appending(
-            queryItems: [URLQueryItem(name: "deleteFiles", value: storedData ? "true" : "false")]
-        )
-    }
+    static let remoteServer = "http://\(serverIP):\(serverPORT)/api/v1/nodes/"
+    static let torrentsURL = URL(string: "\(remoteServer)/\(torrentKey)")!
 }
