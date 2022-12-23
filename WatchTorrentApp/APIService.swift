@@ -21,16 +21,4 @@ enum APIService {
         return try await APIService
             .fetch(from: Constants.torrentsURL)
     }
-
-    static func pauseTorrents(hashes: [String]) async throws {
-        let _ = try await URLSession.shared.data(from: Constants.addHashes(hashes: hashes, base: Constants.pause))
-    }
-
-    static func resumeTorrents(hashes: [String]) async throws {
-        let _ = try await URLSession.shared.data(from: Constants.addHashes(hashes: hashes, base: Constants.resume))
-    }
-
-    static func deleteTorrents(hashes: [String], storedData: Bool = false) async throws {
-        let _ = try await URLSession.shared.data(from: Constants.deleteURL(hashes: hashes, storedData: storedData))
-    }
 }

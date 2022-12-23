@@ -19,34 +19,6 @@ struct ContentView: View {
                     VStack {
                         ForEach(torrents) { torrent in
                             SingleTorrentRow(torrent: torrent)
-                                .contextMenu(menuItems: {
-                                    VStack {
-                                        if torrent.state == .pausedDL {
-                                            ContextMenuButton("Resume", "play") {
-                                                Task {
-                                                    await torrent.resume()
-                                                }
-                                            }
-                                        } else {
-                                            ContextMenuButton("Pause", "pause") {
-                                                Task {
-                                                    await torrent.pause()
-                                                }
-                                            }
-                                        }
-
-                                        ContextMenuButton("Delete", "trash") {
-                                            Task {
-                                                await torrent.delete(storedData: false)
-                                            }
-                                        }
-                                        ContextMenuButton("Delet + Files", "trash") {
-                                            Task {
-                                                await torrent.delete(storedData: true)
-                                            }
-                                        }
-                                    }
-                                })
                         }
                     }
                     .padding(.horizontal)
@@ -55,10 +27,11 @@ struct ContentView: View {
                 VStack {
                     Image(systemName: "wifi.router.fill")
                         .imageScale(.large)
-                    Text("Connecting")
-                    Text(Constants.ipPort)
+                    Text("Connecting to")
+                    Text(Constants.torrentKey)
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
+                        .multilineTextAlignment(.center)
                 }
                 .foregroundStyle(.secondary)
             }

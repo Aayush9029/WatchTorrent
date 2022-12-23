@@ -123,16 +123,4 @@ extension TorrentModel {
     static func fetch() async -> [TorrentModel]? {
         try? await APIService.fetchTorrents()
     }
-
-    func pause() async {
-        try? await APIService.pauseTorrents(hashes: [hash])
-    }
-
-    func resume() async {
-        try? await APIService.resumeTorrents(hashes: [hash])
-    }
-
-    func delete(storedData: Bool = false) async {
-        try? await APIService.deleteTorrents(hashes: [hash], storedData: storedData)
-    }
 }
