@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21B5341295685B000DDCAD8 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21B5340295685B000DDCAD8 /* BadgeView.swift */; };
 		C22A85062950F804001EB3B3 /* WatchTorrentApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C22A85052950F804001EB3B3 /* WatchTorrentApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C22A850B2950F804001EB3B3 /* WatchTorrentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A850A2950F804001EB3B3 /* WatchTorrentApp.swift */; };
 		C22A850D2950F804001EB3B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22A850C2950F804001EB3B3 /* ContentView.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C21B5340295685B000DDCAD8 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		C22A84FF2950F804001EB3B3 /* WatchTorrent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchTorrent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22A85052950F804001EB3B3 /* WatchTorrentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchTorrentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22A850A2950F804001EB3B3 /* WatchTorrentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTorrentApp.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C288E55B29515D6C006E39E7 /* Info.plist */,
 				C22A850A2950F804001EB3B3 /* WatchTorrentApp.swift */,
 				C22A850C2950F804001EB3B3 /* ContentView.swift */,
+				C21B5340295685B000DDCAD8 /* BadgeView.swift */,
 				C22A85272950FE55001EB3B3 /* SingleTorrentRow.swift */,
 				C22A85292951055F001EB3B3 /* Extensions */,
 				C22A851C2950F882001EB3B3 /* Models */,
@@ -260,6 +263,7 @@
 				C22A852B2951056A001EB3B3 /* Int+Extensions.swift in Sources */,
 				C22D70B329554457000DE71E /* String+Extensions.swift in Sources */,
 				C22A85252950FD4F001EB3B3 /* Helpers.swift in Sources */,
+				C21B5341295685B000DDCAD8 /* BadgeView.swift in Sources */,
 				C22A850B2950F804001EB3B3 /* WatchTorrentApp.swift in Sources */,
 				C22D70AF29553D9B000DE71E /* Constants.swift in Sources */,
 			);

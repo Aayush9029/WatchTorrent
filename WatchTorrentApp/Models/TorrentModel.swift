@@ -13,36 +13,38 @@ import Foundation
 
 struct TorrentModel: Codable, Identifiable {
     var id: String { magnetURI }
-    let addedOn, amountLeft: Int
+    let addedOn, amountLeft: Int64
     let autoTmm: Bool
     let availability: Double
     let category: String
-    let completed, completionOn: Int
+    let completed: Int64
+    let completionOn: Int64
     let contentPath: String
-    let dlLimit, dlspeed: Int
+    let dlLimit, dlspeed: Int64
     let downloadPath: String
-    let downloaded, downloadedSession, eta: Int
+    let downloaded, downloadedSession, eta: Int64
     let fLPiecePrio, forceStart: Bool
     let hash, infohashV1, infohashV2: String
-    let lastActivity: Int
+    let lastActivity: Int64
     let magnetURI: String
-    let maxRatio, maxSeedingTime: Int
+    let maxRatio, maxSeedingTime: Int64
     let name: String
-    let numComplete, numIncomplete, numLeechs, numSeeds: Int
-    let priority: Int
-    let progress, ratio: Double
-    let ratioLimit: Int
+    let numComplete, numIncomplete, numLeechs, numSeeds: Int64
+    let priority: Int64
+    let progress: Double
+    let ratio: Double
+    let ratioLimit: Int64
     let savePath: String
-    let seedingTime, seedingTimeLimit, seenComplete: Int
+    let seedingTime, seedingTimeLimit, seenComplete: Int64
     let seqDL: Bool
-    let size: Int
+    let size: Int64
     let state: TorrentState
     let superSeeding: Bool
     let tags: String
-    let timeActive, totalSize: Int
+    let timeActive, totalSize: Int64
     let tracker: String
-    let trackersCount, upLimit, uploaded, uploadedSession: Int
-    let upspeed: Int
+    let trackersCount, upLimit, uploaded, uploadedSession: Int64
+    let upspeed: Int64
 
     enum CodingKeys: String, CodingKey {
         case addedOn = "added_on"
@@ -131,7 +133,7 @@ extension TorrentModel {
             print("Type '\(type)' mismatch:", context.debugDescription)
             print("codingPath:", context.codingPath)
         } catch {
-            print(error.localizedDescription)
+            print(String(describing: error))
         }
         return nil
     }
@@ -147,7 +149,6 @@ extension PiedPiperModel {
     static func example() async -> [TorrentModel]? {
         let data = readLocalJSONFile(forName: "piedpiper")!
         let ppModel = try? JSONDecoder().decode(PiedPiperModel.self, from: data)
-
         return await piedToTorrent(pied: ppModel)
     }
 
@@ -155,7 +156,6 @@ extension PiedPiperModel {
         do {
             let (data, _) = try await URLSession.shared.data(from: Constants.torrentsURL)
             let ppModel = try JSONDecoder().decode(PiedPiperModel.self, from: data)
-
             return await piedToTorrent(pied: ppModel)
 
         } catch let DecodingError.valueNotFound(value, context) {
@@ -165,7 +165,7 @@ extension PiedPiperModel {
             print("Type '\(type)' mismatch:", context.debugDescription)
             print("codingPath:", context.codingPath)
         } catch {
-            print(error.localizedDescription)
+            print(String(describing: error))
         }
         return nil
     }
@@ -178,7 +178,17 @@ extension PiedPiperModel {
                 // Decoding for server side (server choice)
                 if let b64D2 = b64D1.base64Decoded() {
                     if let b64Data = b64D2.data(using: .utf8) {
-                        return try? JSONDecoder().decode([TorrentModel].self, from: b64Data)
+                        do {
+                            return try JSONDecoder().decode([TorrentModel].self, from: b64Data)
+                        } catch let DecodingError.valueNotFound(value, context) {
+                            print("Value '\(value)' not found:", context.debugDescription)
+                            print("codingPath:", context.codingPath)
+                        } catch let DecodingError.typeMismatch(type, context) {
+                            print("Type '\(type)' mismatch:", context.debugDescription)
+                            print("codingPath:", context.codingPath)
+                        } catch {
+                            print(String(describing: error))
+                        }
                     }
                 }
             }

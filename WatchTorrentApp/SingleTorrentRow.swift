@@ -1,7 +1,7 @@
 //
 //  SingleTorrentRow.swift
 //  WatchTorrent Watch App
-// 
+//
 //  Created by Aayush Pokharel on 2022-12-19.
 //
 
@@ -12,9 +12,13 @@ struct SingleTorrentRow: View {
     let torrent: TorrentModel
     var body: some View {
         VStack(alignment: .leading) {
-            Text(cleanName())
-                .lineLimit(showDetails ? 4 : 2)
-                .font(.caption2)
+            HStack {
+                Text(cleanName())
+                    .lineLimit(showDetails ? 4 : 2)
+                    .font(.caption2)
+                Spacer()
+            }
+
             if showDetails {
                 Divider()
                     .opacity(0.5)
@@ -83,10 +87,10 @@ struct SingleTorrentRow: View {
                         lineWidth: 2
                     )
                 RoundedRectangle(cornerRadius: 16)
-                    .trim(from: 0, to: torrent.progress)
+                    .trim(from: 0, to: CGFloat(torrent.progress))
                     .stroke(
                         getColor(),
-                        lineWidth: 3
+                        lineWidth: 2
                     )
             }
             .rotationEffect(Angle(degrees: -180))

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Int {
+extension Int64 {
     func formattedBytes() -> String {
         let formatter = ByteCountFormatter()
         formatter.allowedUnits = [.useKB, .useMB, .useGB, .useTB]

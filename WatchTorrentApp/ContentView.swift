@@ -8,32 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
 
     @State private var torrents: [TorrentModel]?
 
     var body: some View {
         VStack {
             if let torrents {
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
-                        ForEach(torrents) { torrent in
-                            SingleTorrentRow(torrent: torrent)
+                if !torrents.isEmpty {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack {
+                            ForEach(torrents) { torrent in
+                                SingleTorrentRow(torrent: torrent)
+                            }
                         }
+                        .padding(.horizontal)
                     }
-                    .padding(.horizontal)
+                } else {
+                    BadgeView(icon: "tray.and.arrow.down.fill", text: "Empty Torrents", value: "Torrent feed is empty.")
                 }
             } else {
-                VStack {
-                    Image(systemName: "wifi.router.fill")
-                        .imageScale(.large)
-                    Text("Connecting to")
-                    Text(Constants.torrentKey)
-                        .font(.caption2)
-                        .foregroundStyle(.tertiary)
-                        .multilineTextAlignment(.center)
-                }
-                .foregroundStyle(.secondary)
+                BadgeView(icon: "wifi.router.fill", text: "Connecting to", value: Constants.serverIP)
             }
         }.task {
             Task {
